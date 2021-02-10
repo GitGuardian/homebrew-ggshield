@@ -5,6 +5,7 @@ class Ggshield < Formula
   homepage "https://github.com/GitGuardian/gg-shield"
   url "https://files.pythonhosted.org/packages/62/66/2517293ef8e97d173c5177d1a2e3f9e5e8c8d8d4ce11668ca8254eae5466/ggshield-1.3.0.tar.gz"
   sha256 "66fbd0e51c2eb6da63e0af09dbcada898f4088242da610c17d86bd5842db624a"
+  license "MIT"
 
   depends_on "python3"
 
