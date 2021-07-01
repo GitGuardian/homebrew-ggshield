@@ -6,6 +6,8 @@ class Ggshield < Formula
   url "https://files.pythonhosted.org/packages/a0/1f/d1e46163a98930e5ba2a9df6492ac16c7553050e6de25574153c5075ba3a/ggshield-1.6.1.tar.gz"
   sha256 "4389fb963aa695ccd1b79c94751c7d15b88bc09533db2a8edae19725a8afa62b"
   license "MIT"
+  language "en-US"
+
 
   depends_on "python3"
 
