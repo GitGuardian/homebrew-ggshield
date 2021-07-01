@@ -69,8 +69,6 @@ class Ggshield < Formula
     virtualenv_install_with_resources
   end
 
-
-
   test do
     false
   end
