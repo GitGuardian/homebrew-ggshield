@@ -39,6 +39,9 @@ jobs:
       - name: Lint Formulae
         run: brew audit --strict ggshield
 
+      - name: Install
+        run: brew install --build-bottle ggshield
+
       - name: Build Bottle
         run: brew bottle --json ggshield
 
