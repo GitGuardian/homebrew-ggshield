@@ -7,6 +7,12 @@ class Ggshield < Formula
   sha256 "4389fb963aa695ccd1b79c94751c7d15b88bc09533db2a8edae19725a8afa62b"
   license "MIT"
 
+  bottle do
+    cellar :any_skip_relocation
+    root_url "https://github.com/GitGuardian/homebrew-ggshield/releases/download/v1.6.1"
+    sha256 cellar: :any, catalina: "e37d796a366cf6d4330e71a400e343eb8790f9c56c018d99ac6cb718b378dfa5"
+  end
+
   depends_on "python3"
 
   resource "certifi" do
@@ -63,6 +69,8 @@ class Ggshield < Formula
     virtualenv_create(libexec, "python3")
     virtualenv_install_with_resources
   end
+
+
 
   test do
     false
