@@ -13,5 +13,19 @@ This [Homebrew](https://brew.sh) tap makes it simpler to install ggshield on Hom
 ### How to install ggshield from homebrew
 
 ```sh
-brew install gitguardian/ggshield/ggshield
+brew tap gitguardian/ggshield
+```
+
+```sh
+brew install ggshield
+```
+
+### Updating ggshield from homebrew
+
+```sh
+brew update
+```
+
+```sh
+brew upgrade ggshield
 ```

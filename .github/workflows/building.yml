@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - "main"
+    paths:
+      - "Formula/*"
 
 jobs:
   build:
@@ -68,4 +70,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{ steps.bottle_name.outputs.filename }}
           asset_name: ${{ steps.bottle_name.outputs.filename }}
-          asset_content_type: application/zi
+          asset_content_type: application/zip
