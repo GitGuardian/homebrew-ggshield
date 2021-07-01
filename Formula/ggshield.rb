@@ -8,7 +8,6 @@ class Ggshield < Formula
   license "MIT"
 
   bottle do
-    cellar :any_skip_relocation
     root_url "https://github.com/GitGuardian/homebrew-ggshield/releases/download/v1.6.1"
     sha256 cellar: :any, catalina: "e37d796a366cf6d4330e71a400e343eb8790f9c56c018d99ac6cb718b378dfa5"
   end
