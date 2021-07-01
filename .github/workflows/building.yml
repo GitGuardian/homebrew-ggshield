@@ -7,13 +7,8 @@ on:
 
 jobs:
   build:
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - ubuntu-latest
-          - macos-latest
-    runs-on: ${{matrix.os}}
+    runs-on: macos-latest
+
     steps:
       - uses: actions/checkout@v2
         with:
@@ -35,36 +30,39 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
 
-      - name: Build bottles
-        run: |
-          brew test-bot --only-cleanup-before
-          brew test-bot --only-setup
-          brew test-bot --only-tap-syntax
-          brew test-bot --only-formulae --skip-recursive-dependents gitguardian/ggshield/ggshield
-      - name: Upload bottles
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: bottles
-          path: "*.bottle.*"
+      - name: Install JQ Dep
+        run: brew install jq
 
-  upload:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-      - name: Set up git
-        uses: Homebrew/actions/git-user-config@master
-      - name: Download bottles
-        uses: actions/download-artifact@v2
-        with:
-          name: bottles
-      - name: Publish bottles
+      - name: Install Tap
+        run: brew tap gitguardian/ggshield
+
+      - name: Lint Formulae
+        run: brew audit --strict ggshield
+
+      - name: Build Bottle
+        run: brew bottle --json ggshield
+
+      - name: Get Bottle Name
+        id: bottle_name
+        run: echo "::set-output name=filename::$(cat *.bottle.json | jq '.[].bottle.tags[].local_filename'  | tr -d '"')"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1.0.0
         env:
-          HOMEBREW_GITHUB_API_TOKEN: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
-        run: brew pr-upload --debug --keep-old --no-commit
-      - name: Push commits
-        uses: Homebrew/actions/git-try-push@master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: true
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ steps.bottle_name.outputs.filename }}
+          asset_name: ${{ steps.bottle_name.outputs.filename }}
+          asset_content_type: application/zi
