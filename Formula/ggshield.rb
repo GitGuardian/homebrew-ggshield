@@ -1,7 +1,7 @@
 class Ggshield < Formula
   include Language::Python::Virtualenv
 
-  desc "Detect secret in source code, scan your repo for leaks. Find secrets with GitGuardian and prevent leaked credentials."
+  desc "Detect secret in source code, scan your repos and docker images for leaks"
   homepage "https://github.com/GitGuardian/gg-shield"
   url "https://files.pythonhosted.org/packages/a0/1f/d1e46163a98930e5ba2a9df6492ac16c7553050e6de25574153c5075ba3a/ggshield-1.6.1.tar.gz"
   sha256 "4389fb963aa695ccd1b79c94751c7d15b88bc09533db2a8edae19725a8afa62b"
