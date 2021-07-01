@@ -1,9 +1,9 @@
 name: Building
 
 on:
-  pull_request:
-    paths:
-      - "Formula/*"
+  push:
+    branches:
+      - "main"
 
 jobs:
   build:
