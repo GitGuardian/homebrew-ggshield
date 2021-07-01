@@ -1,3 +1,7 @@
+# Warning: Experimental
+
+### Until deemed stable you should follow the official install instructions at https://github.com/GitGuardian/gg-shield
+
 # [GitGuardian Shield](https://github.com/GitGuardian/gg-shield) Homebrew tap
 
 [![PyPI](https://img.shields.io/pypi/v/ggshield?color=%231B2D55&style=for-the-badge)](https://pypi.org/project/ggshield/)
