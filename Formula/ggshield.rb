@@ -9,6 +9,7 @@ class Ggshield < Formula
 
   bottle do
     root_url "https://github.com/GitGuardian/homebrew-ggshield/releases/download/v1.6.1"
+    rebuild 1
     sha256 cellar: :any, catalina: "e37d796a366cf6d4330e71a400e343eb8790f9c56c018d99ac6cb718b378dfa5"
   end
 
