@@ -2,10 +2,8 @@ name: Building
 
 on:
   push:
-    branches:
-      - "main"
-    paths:
-      - "Formula/*"
+    tags:
+      - v*
 
 jobs:
   build:
