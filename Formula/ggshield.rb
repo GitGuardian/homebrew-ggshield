@@ -7,6 +7,12 @@ class Ggshield < Formula
   sha256 "77e0c08084e452125f6731fa21930da059f412e65bfcf553ca751320f1e6bd91"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/GitGuardian/homebrew-ggshield/releases/download/v1.7.0"
+    rebuild 1
+    sha256 cellar: :any, catalina: "c5820afbe592bc6b4ffb15f153f39e2e679e90f15de971260d3d1d8028d8c0c7"
+  end
+
   depends_on "python3"
 
   resource "certifi" do
