@@ -3,15 +3,9 @@ class Ggshield < Formula
 
   desc "Detect secret in source code, scan your repos and docker images for leaks"
   homepage "https://github.com/GitGuardian/gg-shield"
-  url "https://files.pythonhosted.org/packages/a0/1f/d1e46163a98930e5ba2a9df6492ac16c7553050e6de25574153c5075ba3a/ggshield-1.6.1.tar.gz"
-  sha256 "4389fb963aa695ccd1b79c94751c7d15b88bc09533db2a8edae19725a8afa62b"
+  url "https://files.pythonhosted.org/packages/6a/94/26017dc449e5a3a96bf30de082a0d31993cffdf0299402510f21b25c15ec/ggshield-1.7.0.tar.gz"
+  sha256 "77e0c08084e452125f6731fa21930da059f412e65bfcf553ca751320f1e6bd91"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/GitGuardian/homebrew-ggshield/releases/download/v1.6.1"
-    rebuild 1
-    sha256 cellar: :any, catalina: "e37d796a366cf6d4330e71a400e343eb8790f9c56c018d99ac6cb718b378dfa5"
-  end
 
   depends_on "python3"
 
@@ -41,8 +35,8 @@ class Ggshield < Formula
   end
 
   resource "pygitguardian" do
-    url "https://files.pythonhosted.org/packages/98/77/993da204c1c9f8109bf17bc73bf820acf56d011fa732cec1f131629759c8/pygitguardian-1.2.1.tar.gz"
-    sha256 "d49d8e52cac16737d3c738ad18e3aaea1c7d8c66ef233ca3ac63316818c5ddf4"
+    url "https://files.pythonhosted.org/packages/a8/68/49497c56eb2b52495a0ba60c6dcb26736ee9f7d10db1def722f8d296af54/pygitguardian-1.2.2.tar.gz"
+    sha256 "f87c3744d77d236cc83fa54a052fcf82162dfc7c451e081c65f7505cceda6f86"
   end
 
   resource "python-dotenv" do
@@ -61,8 +55,8 @@ class Ggshield < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/94/40/c396b5b212533716949a4d295f91a4c100d51ba95ea9e2d96b6b0517e5a5/urllib3-1.26.5.tar.gz"
-    sha256 "a7acd0977125325f516bda9735fa7142b909a8d01e8b2e4c8108d0984e6e0098"
+    url "https://files.pythonhosted.org/packages/4f/5a/597ef5911cb8919efe4d86206aa8b2658616d676a7088f0825ca08bd7cb8/urllib3-1.26.6.tar.gz"
+    sha256 "f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"
   end
 
   def install
