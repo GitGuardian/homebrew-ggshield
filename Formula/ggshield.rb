@@ -2,16 +2,10 @@ class Ggshield < Formula
   include Language::Python::Virtualenv
 
   desc "Detect secret in source code, scan your repos and docker images for leaks"
-  homepage "https://github.com/GitGuardian/gg-shield"
-  url "https://files.pythonhosted.org/packages/6a/94/26017dc449e5a3a96bf30de082a0d31993cffdf0299402510f21b25c15ec/ggshield-1.7.0.tar.gz"
-  sha256 "77e0c08084e452125f6731fa21930da059f412e65bfcf553ca751320f1e6bd91"
+  homepage "https://github.com/GitGuardian/ggshield"
+  url "https://files.pythonhosted.org/packages/dd/88/6c12aa69fab6ad5a1a9a4aa210a73a67e953971513226e6db52930a4b917/ggshield-1.7.2.tar.gz"
+  sha256 "cdfb9ef4d142c005bd4f63dadd7ddd527fd83f7bba423a7514b5744c00cd32fb"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/GitGuardian/homebrew-ggshield/releases/download/v1.7.0"
-    rebuild 1
-    sha256 cellar: :any, catalina: "c5820afbe592bc6b4ffb15f153f39e2e679e90f15de971260d3d1d8028d8c0c7"
-  end
 
   depends_on "python3"
 
