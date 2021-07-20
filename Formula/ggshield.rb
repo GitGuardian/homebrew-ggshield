@@ -7,6 +7,11 @@ class Ggshield < Formula
   sha256 "3d484773789024e308b6a0bca229144954081c082650ac16709a2e806b2f6e9e"
   license "MIT"
 
+  bottle do
+    rebuild 1
+    sha256 cellar: :any, catalina: "84e0da4618c69736461cc69a3d705a7da8a472a1640f07dff874200bbc9c1795"
+  end
+
   depends_on "python3"
 
   resource "certifi" do
