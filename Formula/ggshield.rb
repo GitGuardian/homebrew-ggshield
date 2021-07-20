@@ -3,14 +3,9 @@ class Ggshield < Formula
 
   desc "Detect secret in source code, scan your repos and docker images for leaks"
   homepage "https://github.com/GitGuardian/ggshield"
-  url "https://files.pythonhosted.org/packages/dd/88/6c12aa69fab6ad5a1a9a4aa210a73a67e953971513226e6db52930a4b917/ggshield-1.7.2.tar.gz"
-  sha256 "cdfb9ef4d142c005bd4f63dadd7ddd527fd83f7bba423a7514b5744c00cd32fb"
+  url "https://files.pythonhosted.org/packages/be/29/1d773cf5efc04c1834861494da5b22ef36566bb74c2293523f982a128f30/ggshield-1.7.3.tar.gz"
+  sha256 "3d484773789024e308b6a0bca229144954081c082650ac16709a2e806b2f6e9e"
   license "MIT"
-
-  bottle do
-    rebuild 1
-    sha256 cellar: :any, catalina: "a7fa6f35f1313061bdcf1b97ab07614497e9f75c7e8c7a4c1a6ec6a1ef4d7608"
-  end
 
   depends_on "python3"
 
@@ -19,9 +14,9 @@ class Ggshield < Formula
     sha256 "2bbf76fd432960138b3ef6dda3dde0544f27cbf8546c458e60baf371917ba9ee"
   end
 
-  resource "chardet" do
-    url "https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz"
-    sha256 "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
+  resource "charset-normalizer" do
+    url "https://files.pythonhosted.org/packages/37/fd/05a04d7e14548474d30d90ad0db5d90ee2ba55cd967511a354cf88b534f1/charset-normalizer-2.0.3.tar.gz"
+    sha256 "c46c3ace2d744cfbdebceaa3c19ae691f53ae621b39fd7570f59d14fb7f2fd12"
   end
 
   resource "click" do
@@ -30,13 +25,13 @@ class Ggshield < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/ea/b7/e0e3c1c467636186c39925827be42f16fee389dc404ac29e930e9136be70/idna-2.10.tar.gz"
-    sha256 "b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"
+    url "https://files.pythonhosted.org/packages/cb/38/4c4d00ddfa48abe616d7e572e02a04273603db446975ab46bbcd36552005/idna-3.2.tar.gz"
+    sha256 "467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3"
   end
 
   resource "marshmallow" do
-    url "https://files.pythonhosted.org/packages/55/89/32da3b04e975c9a4b9b9ef191be923671a7d5aa8660acc8bdbe996ec774a/marshmallow-3.12.1.tar.gz"
-    sha256 "8050475b70470cc58f4441ee92375db611792ba39ca1ad41d39cad193ea9e040"
+    url "https://files.pythonhosted.org/packages/bc/98/a0fb5d042908cf787831ae23c5b2c33cc023d52c8e11847a3ebd44f33162/marshmallow-3.12.2.tar.gz"
+    sha256 "77368dfedad93c3a041cbbdbce0b33fac1d8608c9e2e2288408a43ce3493d2ff"
   end
 
   resource "pygitguardian" do
@@ -55,8 +50,8 @@ class Ggshield < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/6b/47/c14abc08432ab22dc18b9892252efaf005ab44066de871e72a38d6af464b/requests-2.25.1.tar.gz"
-    sha256 "27973dd4a904a4f13b263a19c866c13b92a39ed1c964655f025f3f8d3d75b804"
+    url "https://files.pythonhosted.org/packages/e7/01/3569e0b535fb2e4a6c384bdbed00c55b9d78b5084e0fb7f4d0bf523d7670/requests-2.26.0.tar.gz"
+    sha256 "b8aa58f8cf793ffd8782d3d8cb19e66ef36f7aba4353eec859e74678b01b07a7"
   end
 
   resource "urllib3" do
