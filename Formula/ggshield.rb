@@ -3,19 +3,24 @@ class Ggshield < Formula
 
   desc "Detect secret in source code, scan your repos and docker images for leaks"
   homepage "https://github.com/GitGuardian/ggshield"
-  url "https://files.pythonhosted.org/packages/1f/cc/51b3557d1afeaa6e7155ac97886b131f1783d16ecb46a1ccb4ade05950ef/ggshield-1.8.1.tar.gz"
-  sha256 "fe3642e664ef1958539b54dba18dc5842b05ee416ef31736c54ecc665474f152"
+  url "https://files.pythonhosted.org/packages/81/85/79e39491697e19ecd74d5565f6f95759646b1aca4c3e7c2201addb976587/ggshield-1.9.0.tar.gz"
+  sha256 "64d4fc87d5625957a29d2cc4ab0fe2cfe1363111101ee1ba69e3855745bc92dc"
 
   depends_on "python3"
 
-  resource "chardet" do
-    url "https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz"
-    sha256 "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
+  resource "certifi" do
+    url "https://files.pythonhosted.org/packages/6d/78/f8db8d57f520a54f0b8a438319c342c61c22759d8f9a1cd2e2180b5e5ea9/certifi-2021.5.30.tar.gz"
+    sha256 "2bbf76fd432960138b3ef6dda3dde0544f27cbf8546c458e60baf371917ba9ee"
+  end
+
+  resource "charset-normalizer" do
+    url "https://files.pythonhosted.org/packages/eb/7f/a6c278746ddbd7094b019b08d1b2187101b1f596f35f81dc27f57d8fcf7c/charset-normalizer-2.0.6.tar.gz"
+    sha256 "5ec46d183433dcbd0ab716f2d7f29d8dee50505b3fdb40c6b985c7c4f5a3591f"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/21/83/308a74ca1104fe1e3197d31693a7a2db67c2d4e668f20f43a2fca491f9f7/click-8.0.1.tar.gz"
-    sha256 "8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a"
+    url "https://files.pythonhosted.org/packages/27/6f/be940c8b1f1d69daceeb0032fee6c34d7bd70e3e649ccac0951500b4720e/click-7.1.2.tar.gz"
+    sha256 "d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"
   end
 
   resource "idna" do
@@ -34,8 +39,8 @@ class Ggshield < Formula
   end
 
   resource "python-dotenv" do
-    url "https://files.pythonhosted.org/packages/59/39/20eb771fc2113fb67638d4f2e1905c51b0c75862d09018a393470234a51c/python-dotenv-0.19.0.tar.gz"
-    sha256 "f521bc2ac9a8e03c736f62911605c5d83970021e3fa95b37d769e2bbbe9b6172"
+    url "https://files.pythonhosted.org/packages/36/b7/08860463445e6f3b4c5ac24717ce0e8a2f6e9dbc329b0e5d148094ce89ec/python-dotenv-0.19.1.tar.gz"
+    sha256 "14f8185cc8d494662683e6914addcb7e95374771e707601dfc70166946b4c4b8"
   end
 
   resource "PyYAML" do
@@ -54,8 +59,8 @@ class Ggshield < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/4f/5a/597ef5911cb8919efe4d86206aa8b2658616d676a7088f0825ca08bd7cb8/urllib3-1.26.6.tar.gz"
-    sha256 "f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"
+    url "https://files.pythonhosted.org/packages/80/be/3ee43b6c5757cabea19e75b8f46eaf05a2f5144107d7db48c7cf3a864f73/urllib3-1.26.7.tar.gz"
+    sha256 "4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece"
   end
 
   resource "yaspin" do
