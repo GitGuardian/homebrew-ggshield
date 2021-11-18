@@ -3,8 +3,8 @@ class Ggshield < Formula
 
   desc "Detect secret in source code, scan your repos and docker images for leaks"
   homepage "https://github.com/GitGuardian/ggshield"
-  url "https://files.pythonhosted.org/packages/fc/87/ba06ed796e11181122b698ff552731b7f1470f1ddee629c442de8790d2b9/ggshield-1.10.4.tar.gz"
-  sha256 "c5df7027407f733a5b86fdf854df4abac3d59a90fbe4302f6fb9fabd2c7c6179"
+  url "https://files.pythonhosted.org/packages/13/c1/448bea37e8aa8942ef1859ad5d6820b591b816d0c9e04ea3aea898cf1717/ggshield-1.10.5.tar.gz"
+  sha256 "6bad67613787faa849602e4569880418eee869840bb2da9e78d2342c56fd7b27"
   license "MIT"
 
   depends_on "python3"
@@ -30,8 +30,8 @@ class Ggshield < Formula
   end
 
   resource "marshmallow" do
-    url "https://files.pythonhosted.org/packages/ee/a6/9e2ad34649f2ea933ee7a3f28a106c4ccba0cb4b2150a03f16b928184fd9/marshmallow-3.14.0.tar.gz"
-    sha256 "bba1a940985c052c5cc7849f97da196ebc81f3b85ec10c56ef1f3228aa9cbe74"
+    url "https://files.pythonhosted.org/packages/ff/04/9a03e7e8e68b1cee2396f51d41cd8741920a8c7b74b32a9e6b29da56e40f/marshmallow-3.14.1.tar.gz"
+    sha256 "4c05c1684e0e97fe779c62b91878f173b937fe097b356cd82f793464f5bc6138"
   end
 
   resource "pygitguardian" do
@@ -40,8 +40,8 @@ class Ggshield < Formula
   end
 
   resource "python-dotenv" do
-    url "https://files.pythonhosted.org/packages/36/b7/08860463445e6f3b4c5ac24717ce0e8a2f6e9dbc329b0e5d148094ce89ec/python-dotenv-0.19.1.tar.gz"
-    sha256 "14f8185cc8d494662683e6914addcb7e95374771e707601dfc70166946b4c4b8"
+    url "https://files.pythonhosted.org/packages/49/62/4f25667e10561303a34cb89e3187c35985c0889b99f6f1468aaf17fbb03e/python-dotenv-0.19.2.tar.gz"
+    sha256 "a5de49a31e953b45ff2d2fd434bbc2670e8db5273606c1e737cc6b93eff3655f"
   end
 
   resource "PyYAML" do
